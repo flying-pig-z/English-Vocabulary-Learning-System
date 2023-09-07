@@ -3,7 +3,7 @@
 #include"wordManagement.h"
 #include"CheckSystem.h"
 using namespace std;
-//bug:µ±Ëæ±ãÊäÈëºÜ³¤µÄÆæ¹ÖÊı×Ö£¬³ÌĞò»á·¢ÉúËÀÑ­»·£¬»º³åÇøÎÊÌâ
+//bug:å½“éšä¾¿è¾“å…¥å¾ˆé•¿çš„å¥‡æ€ªæ•°å­—ï¼Œç¨‹åºä¼šå‘ç”Ÿæ­»å¾ªç¯ï¼Œç¼“å†²åŒºé—®é¢˜
 void manage() {
 	systemManagement systemmanagement;
 	WordManagement wordmanagement;
@@ -18,24 +18,24 @@ void manage() {
 		{
 		case 0:
 			break;
-			//°´1½øĞĞµ¥´ÊÌí¼Ó
+			//æŒ‰1è¿›è¡Œå•è¯æ·»åŠ 
 		case 1:
 			wordmanagement.add();
 			break;
-			//°´2½øĞĞµ¥´ÊÉ¾³ı
+			//æŒ‰2è¿›è¡Œå•è¯åˆ é™¤
 		case 2:
 			wordmanagement.deleteW();
 			break;
-			//°´3½øĞĞµ¥´ÊĞŞ¸Ä
+			//æŒ‰3è¿›è¡Œå•è¯ä¿®æ”¹
 		case 3:
 			wordmanagement.modify();
 			break;
-			//°´4½øĞĞµ¥´Ê²éÑ¯
+			//æŒ‰4è¿›è¡Œå•è¯æŸ¥è¯¢
 		case 4:
 			wordmanagement.find();
 			break;
 		default:
-			cout << "Êä´íÁË£¬ÇëÔÚÊäÈëÒ»´Î\n" << endl;
+			cout << "è¾“é”™äº†ï¼Œè¯·åœ¨è¾“å…¥ä¸€æ¬¡\n" << endl;
 			system("pause");
 			continue;
 		}
@@ -69,7 +69,7 @@ void check() {
 			checksystem.reviewSpotCheck();
 			break;
 		default:
-			cout << "Êä´íÁË£¬ÇëÔÚÊäÈëÒ»´Î\n" << endl;
+			cout << "è¾“é”™äº†ï¼Œè¯·åœ¨è¾“å…¥ä¸€æ¬¡\n" << endl;
 			system("pause");
 			continue;
 		}
@@ -85,26 +85,26 @@ int main()
 {
 	int judge = 0;
 	systemManagement systemmanagement;
-	//ÏÔÊ¾½çÃæ
+	//æ˜¾ç¤ºç•Œé¢
 	systemmanagement.displayInterface();
 	for (;;) {
 		cin>>judge;
-		//¸÷¸ö²Ù×÷
+		//å„ä¸ªæ“ä½œ
 		switch (judge)
 		{
-		//°´0ÍË³ö
+		//æŒ‰0é€€å‡º
 		case 0:
 			break;
-		//°´1½øÈë¹ÜÀíÏµÍ³
+		//æŒ‰1è¿›å…¥ç®¡ç†ç³»ç»Ÿ
 		case 1:
 			manage();
 			break;
-		//°´2½øÈë³é²éÏµÍ³
+		//æŒ‰2è¿›å…¥æŠ½æŸ¥ç³»ç»Ÿ
 		case 2:
 			check();
 			break;
 		default:
-			cout << "Êä´íÁË£¬ÇëÔÙÊäÒ»´Î\n" << endl;
+			cout << "è¾“é”™äº†ï¼Œè¯·å†è¾“ä¸€æ¬¡\n" << endl;
 			system("pause");
 		}
 		if (judge == 0)
